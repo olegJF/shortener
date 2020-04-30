@@ -6,7 +6,7 @@
         {% if object %}
             <p>Адрес до сокращения: {{ object.url }}</p><br>
 
-            <p>Короткий адрес: {{ domain }}{% url 'short_url' short_url=object.short%}</p>
+            <p>Короткий адрес: https://{{ domain }}{% url 'short_url' short_url=object.short%}</p>
             <br>
 
             <p><a href='{% url 'short_url' short_url=object.short%}'>

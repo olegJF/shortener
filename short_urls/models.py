@@ -1,6 +1,4 @@
 from django.db import models
-from django.urls import reverse
-
 from short_urls.utils import create_short_url, validate_url
 
 
@@ -17,7 +15,3 @@ class URL(models.Model):
 
     def __str__(self):
         return str(self.url)
-
-    # def get_url(self):
-    #     url_path = reverse("short_url", kwargs={'short_url': self.short})
-    #     return url_path
